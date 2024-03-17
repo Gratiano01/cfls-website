@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,intial-scale=1,maximum-scale=0,user-scalable=yes,shrink-to-fit=no">
+
+  <link rel="stylesheet" href="./css/carousel.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>首页</title>
+</head>
+
+<body>
+  <!-- 顶部 -->
+  <header>
+    <div class="container flex header">
+      <a href="/" class="logo">
+        <img src="./images/logo.png" alt="">
+        <img src="./images/logo.png" alt="">
+        <span>
+          <%= about.name %>
+        </span>
+      </a>
+      <!-- 导航 -->
+      <nav>
+        <ul class="flex flex-center">
+          <li><a href="/">学校首页</a></li>
+          <li><a href="/active">成外活动</a></li>
+          <li><a href="/teacher">教师风采</a></li>
+          <li><a href="/alumnus">学生天地</a></li>
+          <li><a href="javascript:;">党群工作</a></li>
+          <li><a href="javascript:;">对外交流</a></li>
+          <li><a href="javascript:;">校友频道</a></li>
+          <li><a href="javascript:;">招生招聘</a></li>
+        </ul>
+      </nav>
+    </div>
+
+  </header>
+
+  <section>
+    <!-- 外部容器 -->
+    <div class="carousel">
+      <!-- 内容层 -->
+      <div class="content">
+        <img src="./images/banner.png" alt="">
+        <img src="./images/banner.png" alt="">
+        <img src="./images/banner.png" alt="">
+        <img src="./images/banner.png" alt="">
+        <img src="./images/banner.png" alt="">
+        <!-- 视觉欺骗 -->
+        <img src="./images/banner.png" alt="">
+      </div>
+      <!-- 分页按钮 -->
+      <div class="pageNavtion">
+        <span class="select"></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <!-- 左右箭头 -->
+      <div class="btns">
+        <button class="iconfont icon-jiantou_xiangzuo" id="pre"></button>
+        <button class="iconfont icon-jiantou_xiangyou" id="next"></button>
+      </div>
+    </div>
+
+  </section>
+  <!-- 喜报 -->
+  <section>
+    <div class="container">
+      <div class="title title1">喜报</div>
+
+      <div class="good-news">
+        <% list.forEach(function(item) { %>
+          <div class="item">
+            <img src="<%= item.photos %>" alt="">
+          </div>
+          <% }); %>
+      </div>
+    </div>
+  </section>
+
+  <!-- 校园新闻 -->
+  <section>
+    <div class="container">
+      <div class="title title2">校园新闻</div>
+      <div class="news">
+
+        <% news.forEach(function(item) { %>
+          <div class="item">
+            <div class="img-box">
+              <img src="<%= item.photos %>" alt="">
+            </div>
+            <div class="time">
+              <%= item.startTime %>
+            </div>
+            <div class="name">
+              <%= item.name %>
+            </div>
+          </div>
+          <% }); %>
+
+      </div>
+    </div>
+  </section>
+  <!-- 学校概况 -->
+  <section class="about">
+    <div class="container">
+      <div class="title3">学校概况</div>
+      <div class="about-content flex">
+        <div class="img-box">
+          <img src="<%= about.photos %>" alt="">
+        </div>
+        <div class="info">
+          <h2>
+            <%= about.name %>
+          </h2>
+          <p>
+            <%= about.content %>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 底部 -->
+  <footer>
+    <div class="container footer flex">
+      <div class="footer-logo">
+        <img src="./images/logo.png" alt="">
+        <img src="./images/logo.png" alt="">
+        <span>
+          <%= about.name %>
+        </span>
+      </div>
+      <div class="footer-contact">
+        <div class="item">联系我们</div>
+        <div class="item">联系我们</div>
+        <div class="item">联系我们</div>
+        <div class="item">联系我们</div>
+      </div>
+    </div>
+  </footer>
+</body>
+<script src="./js/carousel.js"></script>
+<script src="./js/index.js"></script>
+<script>
+
+
+</script>
+
+</html>

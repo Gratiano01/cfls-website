@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="pics/icon.ico" type="image/x-icon">
+  <link href="./css/bootstrap.min.css">
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <title>学生天地</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+  <!-- 顶部 -->
+  <header>
+    <div class="container flex header">
+      <a href="/" class="logo">
+        <img src="./images/logo.png" alt="">
+        <img src="./images/logo.png" alt="">
+        <span>成都外国语学校国际部</span>
+      </a>
+      <!-- 导航 -->
+      <nav>
+        <ul class="flex flex-center">
+          <li><a href="/">学校首页</a></li>
+          <li><a href="/active">成外活动</a></li>
+          <li><a href="/teacher">教师风采</a></li>
+          <li><a href="/alumnus">学生天地</a></li>
+          <li><a href="javascript:;">党群工作</a></li>
+          <li><a href="javascript:;">对外交流</a></li>
+          <li><a href="javascript:;">校友频道</a></li>
+          <li><a href="javascript:;">招生招聘</a></li>
+        </ul>
+      </nav>
+    </div>
+
+  </header>
+  <div class="active-title">
+    <div class="container">学生天地</div>
+
+  </div>
+
+
+  <div class="clean clear container" style="margin-top: 50px; margin-bottom: 50px;">
+    <% list.forEach(function(item) { %>
+      <div style="float:left; width:33.33%;padding:0 15px" align="center">
+        <div class="card link-style" style=" cursor: pointer">
+          <img src="<%= item.photos %>" class="card-img-top"
+            style="height:250px;width:250px;display: block;margin: auto;">
+          <div class="card-body">
+            <h5 class="card-title" style="margin-top: 20px;font-size: 16px;">
+              <%= item.name %>
+            </h5>
+          </div>
+        </div>
+      </div>
+      <% }); %>
+  </div>
+
+
+  <!-- 底部 -->
+  <footer>
+    <div class="container footer flex">
+      <div class="footer-logo">
+        <img src="./images/logo.png" alt="">
+        <img src="./images/logo.png" alt="">
+        <span>成都外国语学校国际部</span>
+      </div>
+      <div class="footer-contact">
+        <div class="item">联系我们</div>
+        <div class="item">联系我们</div>
+        <div class="item">联系我们</div>
+        <div class="item">联系我们</div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

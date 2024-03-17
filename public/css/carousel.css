@@ -1,0 +1,79 @@
+/* 样式重置 */
+* {
+  padding: 0;
+  margin: 0;
+}
+.carousel {
+  width: 100%;
+  height: 450px;
+  position: relative;
+  overflow: hidden;
+}
+.content {
+  /* 一张图片为父级标签的100%，六张600% */
+  width: 700%;
+  height: 450px;
+  /* 去除图片间隙---图片间回车键产生的 */
+  font-size: 0;
+  /* 相对于窗口进行定位，注：一旦使用定位，会使内容脱离父级标签（高度坍塌） */
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.content img {
+  /* 100%/7 */
+  width: 14.28%;
+  height: 100%;
+}
+/* 分页按钮 */
+.pageNavtion {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+}
+.pageNavtion span {
+  /* 行属性标签不能调节宽高。宽高只能由内容撑开，故转换为行内块属性 */
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: grey;
+  margin: 0 5px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.pageNavtion .select {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: aliceblue;
+}
+/* 左右切换箭头 */
+
+.btns {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  /* 将下侧的分页按钮显示出来 */
+  /* height: 370px; */
+  /* background-color: burlywood; */
+}
+.btns button {
+  width: 50px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 0;
+  transition: all 1s;
+  color: white;
+  font-size: 25px;
+}
+.btns button:hover {
+  cursor: pointer;
+  font-size: 35px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: blue;
+}
